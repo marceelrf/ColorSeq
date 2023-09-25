@@ -7,8 +7,8 @@ str_count(DNA)
 #                  y = 1:str_count(DNA)))
 
 
-tibble(DNA = modified_string) %>% 
+tibble(DNA = breakSeqs(DNA,250)) %>% 
   ggplot(aes(x = 1, y = 1, 
              label = DNA)) +
-  geom_text() +
+  geom_text(size = 2) +
   theme_void()
